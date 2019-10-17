@@ -1,0 +1,26 @@
+@keyframes greeting {
+ from {color: #ffcbcb; font-size: 6em;}
+ to {color: #132743; font-size: 4em; }
+}
+
+.Greeting {
+  animation-name: greeting;
+  animation-duration: 2s;
+}
+
+.Greeting {
+  font-size: 4em;
+}
+
+@keyframes weekday {
+  0% {color: #ffcbcb; }
+  75% {color: #ffcbcb;}
+  100% {color: #407088;}
+}
+
+
+.Weekday {
+  color: #407088;
+  animation-name: weekday;
+  animation-duration: 4s;
+}

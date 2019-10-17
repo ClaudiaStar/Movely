@@ -1,0 +1,25 @@
+.Timers {
+  border: 1px solid #ffdfdf;
+  border-width: thick;
+  border-radius: 10%;
+  width: fit-content;
+  margin: 50px auto;
+  padding: 60px;
+  
+}
+
+.Timers input {
+  background-color: transparent;
+  border-style: solid;
+  border-width: 0px 0px 2px 0px;
+  border-color: #407088;
+  padding-left: 5px;
+  font-family: monospace;
+  margin: 5px;
+  text-align: center;
+}
+
+.Timers input:focus {
+  outline: none;
+  background-color: #ffdfdf;
+}

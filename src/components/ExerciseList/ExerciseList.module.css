@@ -1,0 +1,27 @@
+.ExerciseList {
+
+}
+
+.Exercise {
+  list-style-type: none;
+  border: 1px solid #407088;
+  border-width: medium;
+  border-radius: 5%;
+  width: fit-content;
+  display: flex;
+  margin: 10px auto;
+  padding: 10px;
+  background-color: #ffdfdf;
+  cursor: pointer;
+}
+
+.Exercise:hover {
+  /* background-color:#407088;
+  color: white; */
+  text-decoration: line-through;
+  border-color: #ffdfdf;
+}
+
+.Exercise:active {
+  transform: rotate(30deg);
+}
