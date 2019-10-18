@@ -1,11 +1,12 @@
 .Timers {
   border: 1px solid #ffdfdf;
   border-width: thick;
-  border-radius: 10%;
+  border-radius: 10px;
   width: fit-content;
-  margin: 50px auto;
+  margin: 50px;
   padding: 60px;
-  
+  height: 120px;
+
 }
 
 .Timers input {

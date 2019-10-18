@@ -8,16 +8,17 @@ const Timers = (props) => {
       <form>
       Exercise Duration:
       <br/>
-      <input type="num" name="duration" placeholder="2"/>
+      <input value={props.duration} type='number' name="duration" onChange={props.durationChanged} required/>
       min
 
       <br/>
       <br/>
       Interval Length:
       <br/>
-      <input type="num" name="interval" placeholder="20"/>
+      <input value={props.interval} type='number' name="interval" onChange={props.intervalChanged} required/>
       min
-
+      <br/>
+      <button>Go!</button>
       </form>
     </div>
   );

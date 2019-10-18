@@ -25,14 +25,22 @@
   background-color: #ffcbcb;
   border: 1px solid #ffdfdf;
   border-width: thick;
-  border-radius: 10%;
-  width: fit-content;
-  margin: 50px auto;
+  border-radius: 10px;
+  width: 500px;
+  margin: 50px;
   padding: 60px;
+  min-height: 250px;
+}
+
+.Exercises {
+  display: flex;
+  flex-wrap: wrap;
 
 }
 
-/* .ListAndTimer {
+.ListAndTimer {
   display: flex;
   flex-wrap: wrap;
-} */
+  justify-content: center;
+  align-items: flex-start;
+}
