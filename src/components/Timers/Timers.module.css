@@ -1,26 +1,44 @@
 .Timers {
-  border: 1px solid #ffdfdf;
+  border: 1px solid #fbc99d;
   border-width: thick;
   border-radius: 10px;
   width: fit-content;
   margin: 50px;
   padding: 60px;
-  height: 120px;
-
+  height: 200px;
 }
 
-.Timers input {
+.Timers input[type="number"] {
   background-color: transparent;
   border-style: solid;
   border-width: 0px 0px 2px 0px;
-  border-color: #407088;
+  border-color: #ed1250;
   padding-left: 5px;
   font-family: monospace;
   margin: 5px;
   text-align: center;
 }
 
-.Timers input:focus {
+.Timers input[type="number"]:focus {
   outline: none;
-  background-color: #ffdfdf;
+  background-color: #fff6da;
+}
+
+.Timers input[type="button"] {
+  margin: 30px 0;
+  padding: 15px;
+  font-family: monospace;
+  background-color: #ed1250;
+  color: white;
+  border-color: #fff6da;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.Timers input[type="button"]:hover {
+  opacity: 0.85;
+}
+
+.Countdown {
+  color: #ed1250;
 }

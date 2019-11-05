@@ -1,5 +1,4 @@
 .WelcomePage {
-
 }
 
 .Form {
@@ -10,7 +9,7 @@
   background-color: transparent;
   border-style: solid;
   border-width: 0px 0px 2px 0px;
-  border-color: #407088;
+  border-color: #ed1250;
   padding-left: 5px;
   font-family: monospace;
   margin: 5px;
@@ -18,24 +17,23 @@
 
 .Form input:focus {
   outline: none;
-  background-color: #ffdfdf;
+  background-color: #fff6da;
 }
 
 .ExerciseList {
-  background-color: #ffcbcb;
-  border: 1px solid #ffdfdf;
+  background-color: #fff6da;
+  border: 1px solid #fbc99d;
   border-width: thick;
   border-radius: 10px;
   width: 500px;
   margin: 50px;
   padding: 60px;
-  min-height: 250px;
+  min-height: 200px;
 }
 
 .Exercises {
   display: flex;
   flex-wrap: wrap;
-
 }
 
 .ListAndTimer {
@@ -43,4 +41,19 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
+}
+
+.CountdownRenderer {
+  color: #ed1250;
+}
+
+.Completionist {
+  height: 100vh;
+  width: 100vw;
+  background-color: red;
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }

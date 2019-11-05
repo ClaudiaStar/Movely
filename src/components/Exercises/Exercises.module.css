@@ -1,17 +1,16 @@
 .Exercises {
-
 }
 
 .Exercise {
   list-style-type: none;
-  border: 1px solid #407088;
+  border: 1px solid #ed1250;
   border-width: medium;
   border-radius: 5%;
   width: fit-content;
   display: flex;
   margin: 10px auto;
   padding: 10px;
-  background-color: #ffdfdf;
+  background-color: #fff6da;
   cursor: pointer;
 }
 
@@ -19,7 +18,7 @@
   /* background-color:#407088;
   color: white; */
   text-decoration: line-through;
-  border-color: #ffdfdf;
+  border-color: #fff6da;
 }
 
 .Exercise:active {

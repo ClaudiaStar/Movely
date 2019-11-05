@@ -1,11 +1,21 @@
+.Heading {
+  display: flex;
+  justify-content: center;
+}
+
 @keyframes greeting {
- from {color: #ffcbcb; font-size: 6em;}
- to {color: #132743; font-size: 4em; }
+  from {
+    color: #fff6da;
+  }
+  to {
+    color: #042f4b;
+  }
 }
 
 .Greeting {
   animation-name: greeting;
-  animation-duration: 2s;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
 }
 
 .Greeting {
@@ -13,14 +23,18 @@
 }
 
 @keyframes weekday {
-  0% {color: #ffcbcb; }
-  75% {color: #ffcbcb;}
-  100% {color: #407088;}
+  from {
+    position: absolute;
+    float: right;
+  }
+  to {
+    position: fixed;
+    float: left;
+  }
 }
 
-
-.Weekday {
-  color: #407088;
+/* .Weekday {
+  color: #ed1250;
   animation-name: weekday;
-  animation-duration: 4s;
-}
+  animation-duration: 3s;
+} */
