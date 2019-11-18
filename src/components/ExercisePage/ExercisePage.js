@@ -4,13 +4,15 @@ import Countdown from "react-countdown-now";
 
 const ExercisePage = props => {
   let durationSeconds = props.exerciseDuration * 60000;
-
+  let exercises = props.exercises;
+  let randomExercise = exercises[Math.floor(Math.random() * exercises.length)];
   const renderer = ({ minutes, seconds, completed }) => {
     if (completed) {
       // Render a complete state
-      return window.location.reload();
+      window.location.reload(false);
     } else {
       // Render a countdown
+
       return (
         <span className={classes.CountdownRenderer}>
           <h2>Time remaining:</h2>
@@ -22,14 +24,9 @@ const ExercisePage = props => {
   return (
     <div className={classes.ExercisePage}>
       {/* <p>Back</p> */}
-      <h1>{props.randomExercise}</h1>
+      <h1>{randomExercise}</h1>
 
-      {props.showExerciseCountdown ? null : (
-        <input type="button" value="Let's Go!" onClick={props.clicked} />
-      )}
-      {props.showExerciseCountdown ? (
-        <Countdown renderer={renderer} date={Date.now() + durationSeconds} />
-      ) : null}
+      <Countdown renderer={renderer} date={Date.now() + durationSeconds} />
     </div>
   );
 };

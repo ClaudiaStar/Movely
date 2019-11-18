@@ -14,7 +14,7 @@ class WelcomePage extends Component {
     duration: "1",
     intervalMinutes: 20,
     showCountdown: false,
-    showExerciseCountdown: false
+    showExercisePage: true
   };
 
   onExerciseChange = event => {
@@ -49,8 +49,8 @@ class WelcomePage extends Component {
     this.setState({ showCountdown: true });
   };
 
-  onExerciseStartButtonClick = () => {
-    this.setState({ showExerciseCountdown: true });
+  onStartMovingButtonClick = () => {
+    this.setState({ showExercisePage: true });
   };
 
   render() {
@@ -66,24 +66,15 @@ class WelcomePage extends Component {
 
     let countdownSeconds = this.state.intervalMinutes * 60000;
 
-    const randomExercise = this.state.exercises[
-      Math.floor(Math.random() * this.state.exercises.length)
-    ];
-
-    // Time function using Countdown package
-    const Completionist = () => (
-      <ExercisePage
-        randomExercise={randomExercise}
-        exerciseDuration={this.state.duration}
-        showExerciseCountdown={this.state.showExerciseCountdown}
-        clicked={this.onExerciseStartButtonClick}
-      />
-    );
-
     const renderer = ({ minutes, seconds, completed }) => {
       if (completed) {
-        // Render a complete state
-        return <Completionist />;
+        alert("Time to move!");
+        return (
+          <ExercisePage
+            exerciseDuration={this.state.duration}
+            exercises={this.state.exercises}
+          />
+        );
       } else {
         // Render a countdown
         return (
