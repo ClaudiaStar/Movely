@@ -80,7 +80,7 @@ class WelcomePage extends Component {
         return (
           <span className={classes.CountdownRenderer}>
             <h2>Time remaining:</h2>
-            {minutes}:{seconds}
+            {("0" + minutes).slice(-2)}:{("0" + seconds).slice(-2)}
           </span>
         );
       }

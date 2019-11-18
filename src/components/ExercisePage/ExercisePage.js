@@ -3,7 +3,7 @@ import classes from "./ExercisePage.module.css";
 import Countdown from "react-countdown-now";
 
 const ExercisePage = props => {
-  let durationSeconds = props.exerciseDuration * 60000;
+  let durationSeconds = props.exerciseDuration * 60000 + 5000;
   let exercises = props.exercises;
   let randomExercise = exercises[Math.floor(Math.random() * exercises.length)];
   const renderer = ({ minutes, seconds, completed }) => {
@@ -15,8 +15,10 @@ const ExercisePage = props => {
 
       return (
         <span className={classes.CountdownRenderer}>
-          <h2>Time remaining:</h2>
-          {minutes}:{seconds}
+          <h2 onClick={props.clicked}>It's go time!</h2>
+          <span>
+            {("0" + minutes).slice(-2)}:{("0" + seconds).slice(-2)}
+          </span>
         </span>
       );
     }
@@ -26,7 +28,12 @@ const ExercisePage = props => {
       {/* <p>Back</p> */}
       <h1>{randomExercise}</h1>
 
-      <Countdown renderer={renderer} date={Date.now() + durationSeconds} />
+      <Countdown
+        zeroPadTime={2}
+        autoStart={props.autoStart}
+        renderer={renderer}
+        date={Date.now() + durationSeconds}
+      />
     </div>
   );
 };
